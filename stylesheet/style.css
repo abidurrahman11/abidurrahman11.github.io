@@ -183,7 +183,7 @@ header.sticky ul li a {
 
 /*---------------------First Section----------------------*/
 .banner {
-    background: url(images/background/software-developer.webp);
+    background: url("images/background/software-developer.webp");
     background-size: cover;
     background-attachment: fixed;
 }
