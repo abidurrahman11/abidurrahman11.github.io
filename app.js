@@ -1,4 +1,4 @@
-// Hamburger menu functionality
+// Sticky Header functionality
 
 var header = document.querySelector("header");
 
@@ -6,10 +6,12 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
+//Hamburger Menu functionality
+
 var hamburger = document.querySelector(".hamburger");
 var bars = document.querySelectorAll(".line");
 var nav = document.querySelector("nav")
-var navItem = document.querySelectorAll(".nav-item");
+var navLinks = document.querySelectorAll(".nav-links");
 
 hamburger.addEventListener("click", function() {
 
@@ -22,8 +24,8 @@ hamburger.addEventListener("click", function() {
 });
 
 
-for (let i = 0; i < navItem.length; i++) {
-    navItem[i].addEventListener("click", function() {
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", function() {
         nav.classList.remove("open");
         for (let i = 0; i < bars.length; i++) {
             bars[i].classList.remove("open");
@@ -80,7 +82,7 @@ var repeat = function(activeClass) {
                 return;
             }
             repeater();
-        }, 50000);
+        }, 5000);
     }
     repeater();
 }
